@@ -1,0 +1,79 @@
+@import "colors";
+@mixin setMarginPadding($margin: 0, $padding: 0) {
+	margin: $margin;
+	padding: $padding;
+}
+
+* {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: clamp(14px, 1.5vw, 20px);
+}
+
+html {
+	height: 100%;
+}
+body {
+	@include setMarginPadding(0, 0);
+	background-color: $myBackgroundColor;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+/*Шапка*/
+#header {
+	@include setMarginPadding(0, 0);
+	display: flex;
+	height: auto;
+	width: auto;
+}
+#logo-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 7vw;
+	height: auto;
+	min-width: 50px;
+	background-color: $myWhite;
+}
+#site-image {
+	width: 100%;
+	height: 100%;
+	transition: box-shadow 0.3s ease;
+}
+#sections-links {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: $myGrayWhite;
+	ul {
+	list-style: none;
+	display: flex;
+	gap: 40px;
+	li {
+		a {
+			text-decoration: none;
+			color: $myBlack;
+			&:hover {
+				color: $myBlackRed;
+				}
+			}
+		}
+	}
+}
+
+/*Тело*/
+#main {
+	@include setMarginPadding(25px, 20px);
+	flex: 1 0 auto;
+	background-color: $myWhite;
+}
+
+/*Подвал*/
+#footer {
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $myGrayWhite;
+}
