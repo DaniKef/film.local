@@ -29,7 +29,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
+  max-height: 10vh;
   width: auto;
 }
 
@@ -58,8 +58,8 @@ body {
   transition: filter 0.3s ease, -webkit-filter 0.3s ease;
 }
 #site-image:hover {
-  -webkit-filter: drop-shadow(0 0 9px rgba(255, 15, 15, 0.3));
-          filter: drop-shadow(0 0 9px rgba(255, 15, 15, 0.3)); /* Более яркое свечение */
+  -webkit-filter: drop-shadow(0 0 9px rgb(94, 0, 0));
+          filter: drop-shadow(0 0 9px rgb(94, 0, 0)); /* Более яркое свечение */
 }
 
 #sections-links {
@@ -84,23 +84,23 @@ body {
   color: rgb(0, 0, 0);
 }
 #sections-links ul li a:hover {
-  color: rgba(255, 15, 15, 0.3);
+  color: rgb(94, 0, 0);
 }
 
 /*Тело*/
-#main {
+#main, #serials, #movies {
   margin: 25px;
-  padding: 20px;
+  padding: 30px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   background-color: rgb(255, 255, 255);
+  border-radius: 8px;
 }
 
 /*Подвал*/
 #footer {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  max-height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

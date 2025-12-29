@@ -5,14 +5,19 @@ if (!isset($_GET['page'])) {
     exit; 
 }
 ?>
+<?php include "includes/db.php"; ?>
 
 <?php include "includes/header.php"; ?>
 
 <?php 
 if (isset($_GET['page']) && $_GET['page'] === 'main') {
     include 'includes/main.php';
-} else if(isset($_GET['page']) && $_GET['page'] === 'movies') {
+} 
+else if (isset($_GET['page']) && $_GET['page'] === 'movies') {
     include 'includes/movies.php';
+}
+else if (isset($_GET['page']) && $_GET['page'] === 'serials') {
+    include 'includes/serials.php';
 }
 ?>
 

@@ -1,4 +1,4 @@
-<main id="main">
+<main id="movies">
         <p>Lorem ipsum dolor sit ame t consectetur adipisicing elit. 
             Cum inventore nostrum asperiores. Deserunt modi dignissimos ad delectus illo, 
             numquam laboriosam incidunt atque ducimus cupiditate ea totam expedita, aspernatur, 

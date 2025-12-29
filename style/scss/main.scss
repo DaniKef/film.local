@@ -24,7 +24,7 @@ body {
 #header {
 	@include setMarginPadding(0, 0);
 	display: flex;
-	height: auto;
+	max-height: 10vh;
 	width: auto;
 }
 #logo-container {
@@ -66,15 +66,16 @@ body {
 }
 
 /*Тело*/
-#main {
-	@include setMarginPadding(25px, 20px);
-	flex: 1 0 auto;
+#main, #serials, #movies {
+	@include setMarginPadding(25px, 30px);
+	flex-grow: 1;
 	background-color: $myWhite;
+	border-radius: 8px;
 }
 
 /*Подвал*/
 #footer {
-	flex-shrink: 0;
+	max-height: 10vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;

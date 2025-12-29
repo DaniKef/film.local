@@ -8,6 +8,7 @@
     <title>SFilms</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/css/main.css" type="text/css">
+    <link rel="stylesheet" href="style/css/movies.css" type="text/css">
 </head>
 <body>
 	<header id="header">
@@ -18,7 +19,7 @@
         <nav id="sections-links">
             <ul>
                 <li><a href="index.php?page=movies">Фильмы</a></li>
-                <li><a href="">Сериалы</a></li>
+                <li><a href="index.php?page=serials">Сериалы</a></li>
             </ul>
         </nav>
     </header>

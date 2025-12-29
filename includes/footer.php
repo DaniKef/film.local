@@ -1,5 +1,5 @@
 	<footer id="footer">
-        <p>SFilms</p>
+        <p>SFilms, 2026</p>
     </footer>
 </body>
 </html>
