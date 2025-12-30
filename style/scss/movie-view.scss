@@ -1,0 +1,40 @@
+@import "colors";
+
+.main-video {
+    width: 100%;
+    video {
+        width: 50vw;
+				height: 40vh;
+        border-radius: 10px;
+        background: $myBlack;
+    }
+}
+
+.episodes-nav {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px 0;
+
+    .ep-btn {
+        min-width: 45px;
+        height: 45px;
+        background: $myBackgroundColor;
+        color: $myWhite;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: $myBlack;
+        }
+
+        &.active {
+            background: $myBlackRed; 
+            box-shadow: 0 0 10px $myBlackRed;
+        }
+    }
+}

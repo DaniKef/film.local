@@ -88,7 +88,7 @@ body {
 }
 
 /*Тело*/
-#main, #serials, #movies {
+#main, #serials, #movies, #serial-view {
   margin: 25px;
   padding: 30px;
   -webkit-box-flex: 1;

@@ -19,6 +19,9 @@ else if (isset($_GET['page']) && $_GET['page'] === 'movies') {
 else if (isset($_GET['page']) && $_GET['page'] === 'serials') {
     include 'includes/serials.php';
 }
+else if (isset($_GET['page']) && $_GET['page'] === 'serial_view') {
+    include 'includes/serial_view.php';
+}
 ?>
 
 <?php include "includes/footer.php"; ?>

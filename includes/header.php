@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/css/main.css" type="text/css">
     <link rel="stylesheet" href="style/css/movies.css" type="text/css">
+    <link rel="stylesheet" href="style/css/movie-view.css" type="text/css">
 </head>
 <body>
 	<header id="header">
