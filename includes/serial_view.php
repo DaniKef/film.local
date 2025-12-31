@@ -47,7 +47,6 @@ if (isset($_GET['id'])) {
     const epNumber = button.getAttribute('data-number');
 
     player.src = newVideoSrc;
-    player.play(); 
 
     title.innerText = "Серия " + epNumber;
 
