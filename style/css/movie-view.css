@@ -33,6 +33,9 @@
 .episodes-nav .ep-btn:hover {
   background: rgb(0, 0, 0);
 }
+.episodes-nav .ep-btn.watched {
+  background: rgb(182, 59, 59);
+}
 .episodes-nav .ep-btn.active {
   background: rgb(94, 0, 0);
   -webkit-box-shadow: 0 0 10px rgb(94, 0, 0);

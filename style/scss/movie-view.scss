@@ -4,7 +4,7 @@
     width: 100%;
     video {
         width: 50vw;
-				height: 40vh;
+		height: 40vh;
         border-radius: 10px;
         background: $myBlack;
     }
@@ -31,7 +31,9 @@
         &:hover {
             background: $myBlack;
         }
-
+        &.watched {
+            background: $myLightRed;
+        }
         &.active {
             background: $myBlackRed; 
             box-shadow: 0 0 10px $myBlackRed;

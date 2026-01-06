@@ -15,11 +15,9 @@ if (isset($_GET['id'])) {
 <div class="player-container">
     <?php if ($first_episode): ?>
         <div class="main-video">
-            <video id="video-player" controls>
-                <source src="<?php echo $first_episode['file_path']; ?>" type="video/mp4">
+            <video id="video-player" src="<?php echo $first_episode['file_path']; ?>" type="video/webm" controls>
                 Ваш браузер не поддерживает видео.
             </video>
-            <h2 id="episode-title">Серия <?php echo $first_episode['episode_number']; ?></h2>
         </div>
 
         <div class="episodes-nav">
@@ -39,22 +37,5 @@ if (isset($_GET['id'])) {
     <?php endif; ?>
 </div>
 
-<script>
-	function changeEpisode(button) {
-    const player = document.getElementById('video-player');
-    const title = document.getElementById('episode-title');
-    const newVideoSrc = button.getAttribute('data-video');
-    const epNumber = button.getAttribute('data-number');
-
-    player.src = newVideoSrc;
-
-    title.innerText = "Серия " + epNumber;
-
-    document.querySelectorAll('.ep-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    button.classList.add('active');
-}
-</script>
-
+<script src="includes/js_serial_view.js"></script>
 </main>
