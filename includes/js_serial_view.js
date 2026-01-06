@@ -33,6 +33,11 @@ function initEpisodeTracker() {
 	}
 }
 
+function changeSeason(button) {
+	const seasonUrl = button.getAttribute('data-season-url');
+	window.location.href = seasonUrl;
+}
+
 function changeEpisode(button) {
 	const player = document.getElementById('video-player');
 	const title = document.getElementById('episode-title');

@@ -12,6 +12,27 @@ if (isset($_GET['id'])) {
 }
 ?>
 
+<div class="seasons-nav">
+    <?php 
+    $seasons_array = mysqli_fetch_all($seasons_list, MYSQLI_ASSOC);
+    $count = count($seasons_array);
+    for ($i = 0; $i < $count; $i++) { 
+        $s = $seasons_array[$i]['season_number'];
+        $season_url = "index.php?page=serial_view&id=" . $serial_id . "&s=" . $s;
+        $is_active = ($s === $season_num) ? 'active' : '';
+        ?>
+        <button 
+        class="season-btn <?php echo $is_active; ?>"
+        data-season-url="<?php echo $season_url; ?>"
+        onclick="changeSeason(this)"
+        >
+            Сезон <?php echo $s; ?>
+        </button>
+        <?php 
+    } 
+    ?>
+</div>
+
 <div class="player-container">
     <?php if ($first_episode): ?>
         <div class="main-video">
