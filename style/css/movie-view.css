@@ -1,7 +1,4 @@
-#serial-view {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+.serial-view {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,11 +77,11 @@
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.episodes-nav .ep-btn:hover {
-  background: rgb(0, 0, 0);
-}
 .episodes-nav .ep-btn.watched {
   background: rgb(182, 59, 59);
+}
+.episodes-nav .ep-btn:hover {
+  background: rgb(0, 0, 0);
 }
 .episodes-nav .ep-btn.active {
   background: rgb(94, 0, 0);

@@ -14,7 +14,7 @@ if (mysqli_num_rows($result) > 0) {
         <div class="movie-card">
           <div class="movie-card_image">
             <a href="index.php?page=serial_view&id=<?php echo $row['id']; ?>&s=1">
-              <img src="<?php echo $row['picture']; ?>" alt="Название фильма">
+              <img src="<?php echo $row['picture']; ?>" alt="<?php echo $row['title']; ?>">
             </a>
           </div>
           <div class="movie_info">

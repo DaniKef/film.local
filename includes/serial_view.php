@@ -1,4 +1,4 @@
-<main id="serial-view">
+<main class="serial-view">
 <?php
 include_once "db.php";
 include_once "SQL_requests.php";
@@ -36,9 +36,17 @@ if (isset($_GET['id'])) {
 <div class="player-container">
     <?php if ($first_episode): ?>
         <div class="main-video">
-            <video id="video-player" src="<?php echo $first_episode['file_path']; ?>" type="video/webm" controls>
-                Ваш браузер не поддерживает видео.
-            </video>
+            <video id="video-player" controls>
+                <source src="<?php echo $first_episode['file_path']; ?>"
+                    type="video/mp4">
+                    <source src="<?php echo $first_episode['file_path']; ?>"
+                    type="video/ogg">
+                    <source src="<?php echo $first_episode['file_path']; ?>"
+                    type="video/webm">
+                    <source src="<?php echo $first_episode['file_path']; ?>"
+                    type="video/x-matroska">
+                    Ваш браузер не поддерживает видео.
+			</video>
         </div>
 
         <div class="episodes-nav">
