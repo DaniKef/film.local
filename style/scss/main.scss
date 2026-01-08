@@ -3,12 +3,10 @@
 	margin: $margin;
 	padding: $padding;
 }
-
 * {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: clamp(14px, 1.5vw, 20px);
 }
-
 html {
 	height: 100%;
 }
@@ -19,7 +17,6 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-
 /*Шапка*/
 #header {
 	@include setMarginPadding(0, 0);
@@ -64,7 +61,6 @@ body {
 		}
 	}
 }
-
 /*Тело*/
 #main, #serials, #movies, .serial-view {
 	@include setMarginPadding(25px, 30px);
@@ -72,7 +68,6 @@ body {
 	background-color: $myWhite;
 	border-radius: 8px;
 }
-
 /*Подвал*/
 #footer {
 	max-height: 10vh;

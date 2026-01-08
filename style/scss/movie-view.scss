@@ -1,18 +1,66 @@
 @import "colors";
-
+$breakpoints: (
+  'phone': 140px,
+  'desktop': 720px,
+);
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}";
+  }
+}
 .serial-view {
+    display: flex;
+    gap: 20px;
+    @include respond-to('phone') {
+        flex-direction: column;
+        align-items: center;
+    }
+    @include respond-to('desktop') {
+        flex-direction: row;
+    }
+}
+.information-panel {
+    .information-panel-figure {   
+        margin: 0;        
+        img {
+            @include respond-to('phone') { 
+                width: 100%;
+                height: 100%;
+            }
+            @include respond-to('desktop') {
+                width: 300px;
+                height: 500px;
+            }
+            border-radius: 10px;
+        }
+    }
+}
+.player-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    @include respond-to('phone') {
+        width: 100%;
+        height: auto;
+    }
+    @include respond-to('desktop') {
+        width: 75%;
+        height: 100%;
+    }
 }
-
 .seasons-nav {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     margin-bottom: 20px;
     padding: 10px 0;
-    
-
     .season-btn {
         min-width: 80px;
         height: 40px;
@@ -23,7 +71,6 @@
         cursor: pointer;
         transition: all 0.3s ease;
         padding: 0 10px;
-
         &:hover {
             background: $myBlack;
         }
@@ -33,19 +80,16 @@
         }
     }
 }
-
 .main-video {
     width: 100%;
     text-align: center;
     video {
-        width: 70vw;
-        max-width: 700px;
+        width: 100%;
 		height: 40vh;
         border-radius: 10px;
         background: $myBlack;
     }
 }
-
 .episodes-nav {
     display: flex;
     flex-wrap: wrap;
@@ -53,7 +97,6 @@
     gap: 10px;
     margin-top: 20px;
     padding: 10px 0;
-
     .ep-btn {
         min-width: 45px;
         height: 45px;
@@ -64,7 +107,6 @@
         cursor: pointer;
         font-weight: bold;
         transition: all 0.3s ease;
-
         &.watched {
             background: $myLightRed;
         }

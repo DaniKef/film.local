@@ -2,6 +2,51 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 20px;
+}
+@media (min-width: 140px) {
+  .serial-view {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (min-width: 720px) {
+  .serial-view {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.information-panel .information-panel-figure {
+  margin: 0;
+}
+@media (min-width: 140px) {
+  .information-panel .information-panel-figure img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 720px) {
+  .information-panel .information-panel-figure img {
+    width: 300px;
+    height: 500px;
+  }
+}
+.information-panel .information-panel-figure img {
+  border-radius: 10px;
+}
+
+.player-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -9,12 +54,33 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
+@media (min-width: 140px) {
+  .player-content {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 720px) {
+  .player-content {
+    width: 75%;
+    height: 100%;
+  }
 }
 
 .seasons-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 20px;
   margin-bottom: 20px;
   padding: 10px 0;
@@ -45,8 +111,7 @@
   text-align: center;
 }
 .main-video video {
-  width: 70vw;
-  max-width: 700px;
+  width: 100%;
   height: 40vh;
   border-radius: 10px;
   background: rgb(0, 0, 0);

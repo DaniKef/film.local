@@ -9,6 +9,13 @@ function getMovieByID($conn, $movie_id) {
     mysqli_stmt_execute($stmt);
     return mysqli_stmt_get_result($stmt);
 }
+function getSerialByID($conn, $serial_id) {
+    $sql = "SELECT * FROM serials WHERE id = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "i", $serial_id);
+    mysqli_stmt_execute($stmt);
+    return mysqli_stmt_get_result($stmt);
+}
 function getSeasonsCount($conn, $serial_id) {
     $sql = "SELECT DISTINCT season_number FROM episodes WHERE serial_id = ? ORDER BY season_number";
     $stmt = mysqli_prepare($conn, $sql);

@@ -8,6 +8,16 @@ if (isset($_GET['id'])) {
 	$movie_data = mysqli_fetch_assoc($movie);
 }
 ?>
+<div class="information-panel">
+    <figure class="information-panel-figure">
+        <img src="<?php echo $movie_data['picture']; ?>" alt="<?php echo $movie_data['title']; ?>">
+        <figcaption>
+            <h1><?php echo $movie_data['title']; ?></h1>
+            <p>Год выпуска: <?php echo $movie_data['release_year']; ?></p>
+        </figcaption>
+    </figure>
+</div>
+<div class="player-content">
 <div class="player-container">
 		<?php if ($movie_data): ?>
 				<div class="main-video">
@@ -26,5 +36,6 @@ if (isset($_GET['id'])) {
 		<?php else: ?>
 				<p>Фильм не найден.</p>
 		<?php endif; ?>
+</div>
 </div>
 </main>
